@@ -13,7 +13,6 @@ import java.util.Optional;
 public class ReverseService {
 
 
-
     private final ReverseRepository reverseRepository;
 
     @Autowired
@@ -29,7 +28,7 @@ public class ReverseService {
                             .withData(data)
                             .withReversedData(createAndPersistReversedDatum(data).reversedData)
                             .build());
-        } catch(Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);
         }
